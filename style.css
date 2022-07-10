@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+.header {
+    font-family: 'Caveat', cursive;
+    font-size: 25pt;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.neonText {
+font-family: "Bad script", cursive;
+     color: #fff;
+    text-shadow:
+     0 0 5px #EB961E, 0 0 10px #EB961E, 0 0 21px #EB961E, 0 0 42px #995D0A, 0 0 82px #995D0A, 0 0 92px #995D0A, 0 0 102px #5271,  0 0 151px #995D0A
+}
+
+h1, h2 {
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.pulsate {
+     animation: pulsate 0.2s ease-in-out infinite alternate;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+.container {
+  margin-top: 20vh;
+}
+
+@keyframes pulsate
+  100%
+    text-shadow: 0 0 4px #EB961E, 0 0 11px #EB961E, 0 0 19px #EB961E, 0 0 40px #995D0A, 0 0 80px #995D0A, 0 0 90px #995D0A, 0 0 100px #995D0A, 0 0 150px #995D0A
+
+  0%
+    text-shadow: 0 0 4px #EB961E, 0 0 10px #EB961E, 0 0 18px #EB961E, 0 0 38px #995D0A, 0 0 73px #995D0A, 0 0 80px #995D0A, 0 0 94px #995D0A, 0 0 140px #995D0A
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+body{
+
+  background: url(bg2.jpeg);
+ max-width: 1440px;
+}
+header a{
+ display: block;
+color: #fff;
+text-decoration: none;
+text-shadow:
+     0 0 5px #EB961E, 0 0 10px #EB961E, 0 0 21px #EB961E, 0 0 42px #995D0A, 0 0 82px #995D0A, 0 0 92px #995D0A, 0 0 102px #5271,  0 0 151px #995D0A
+}
+
+a[href^="mailto:"] {
+font-family: 'Caveat', cursive;
+ color: #fff;
+text-decoration: none;
+text-shadow:
+     0 0 5px #EB961E, 0 0 10px #EB961E, 0 0 21px #EB961E, 0 0 42px #995D0A, 0 0 82px #995D0A, 0 0 92px #995D0A, 0 0 102px #5271,  0 0 151px #995D0A
+}
+a[href^="tel:"] {
+font-family: 'Caveat', cursive;
+  color: #fff;
+text-decoration: none;
+text-shadow:
+     0 0 5px #EB961E, 0 0 10px #EB961E, 0 0 21px #EB961E, 0 0 42px #995D0A, 0 0 82px #995D0A, 0 0 92px #995D0A, 0 0 102px #5271,  0 0 151px #995D0A
+}
+section{
+margin-top: -0.625em;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+section .container{
+  width: 80%;
+  font-family: 'Roboto Slab';
+  color: #fff;
+ text-align: center;
+ text-shadow: 0 0 5px #EB961E,  0 0 151px #995D0A;
+}
+section h1{
+  font-size: 3rem;
+  margin: 0 auto;
+}
+section h2{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section .text-container{
+  width: 100%;
+   display: flex;
+flex-direction: column;
+  height: 100%;
+}
+section .text-container .text-box{
+ padding: 10PX;
+  margin: 20;
+ filter:alpha(opacity=50);
+ -moz-opacity:0.5;
+
+z-index:-1;
+border-radius: 10px;
+border: 2px solid #EB961E;
+box-shadow: 0 0 15px #EB961E;
+}
+section .text-container .text-box h3{
+font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 500px){
+  .header{
+    font-size: 15pt;
+  }
+  section h1{
+    font-size: 20pt;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: column;
+margin-bottom: 200px;
+  }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
